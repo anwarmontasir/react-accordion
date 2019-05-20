@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 import Accordion from './Accordion';
 
 describe('Accordion Component', () => {
-    const accordionProp = [
+    const sectionProp = [
         {
           title: 'Section 1',
           content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -24,4 +24,12 @@ describe('Accordion Component', () => {
         ReactDOM.render(<Accordion />, div);
         ReactDOM.unmountComponentAtNode(div);
     });
+    it('renders empty given no accordion', () => {
+        const wrapper = shallow(<Accordion />);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('renders first section by default', () => {
+        const wrapper = shallow(<Accordion section={sectionProp} />);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
 })

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion Component renders empty given no accordion 1`] = `
+<ul
+  className="accordion"
+/>
+`;
+
+exports[`Accordion Component renders first section by default 1`] = `
+<ul
+  className="accordion"
+/>
+`;
