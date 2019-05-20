@@ -15,8 +15,8 @@ class Accordion extends React.Component {
     renderSections() {
         const currentSection = this.props.sections[this.state.currentSectionIndex];
         return this.props.sections.map((section, index) => (
-           <li>
-                <button key={index} onClick={() => this.handleSectionClick(index)}>
+           <li key={index}>
+                <button onClick={() => this.handleSectionClick(index)}>
                     {section.title}
                 </button>
                 {this.state.currentSectionIndex === index && <p>{currentSection.content}</p>}

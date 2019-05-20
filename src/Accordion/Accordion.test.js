@@ -29,7 +29,7 @@ describe('Accordion Component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
     it('renders first section by default', () => {
-        const wrapper = shallow(<Accordion section={sectionProp} />);
+        const wrapper = shallow(<Accordion sections={sectionProp} />);
         expect(toJson(wrapper)).toMatchSnapshot();
     })
 })
