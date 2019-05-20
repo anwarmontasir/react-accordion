@@ -31,5 +31,10 @@ describe('Accordion Component', () => {
     it('renders first section by default', () => {
         const wrapper = shallow(<Accordion sections={sectionProp} />);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('closes the first section and opens second', () => {
+        const wrapper = shallow(<Accordion sections={sectionProp} />);
+        wrapper.find('button').at(1).simulate('click');
+        expect(toJson(wrapper)).toMatchSnapshot();
     })
 })
