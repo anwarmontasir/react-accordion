@@ -1,0 +1,12 @@
+.accordion button {
+    background: lightblue;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 0;
+}
+.accordion p {
+    background: #fdfcfc;
+    min-height: 200px;
+    padding: 20px;
+    border: 1px solid #777;
+}
